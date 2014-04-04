@@ -1,0 +1,30 @@
+<h1>New Url</h1>
+
+<!-- In the case this template was rendered after a failed @url.save
+     (from the #create action) @url.errors will contain the reasons
+     why the .save failed. Display the errors if present -->
+<% if @url.errors.present? %>
+  <ul class="warnings">
+    <% @url.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<!-- Here's the form to create a new Url -->
+<form action="/urls" method="post">
+  <p>
+    <label for="full_url">Full Url:</label>
+    <!-- Note the special formatting for the name attribute. The url[] syntax
+         will nest the [full_url] key inside a parent key 'url' in the params
+         hash once the request is processed server side.
+
+         Also, we're pre-populating the input box's value to @url.full_url.
+         @url.full_url should only be present when we failed to create a new
+         Url and are re-rendering this page as part of the #create action. -->
+    <input id="full_url" name="url[full_url]" value="<%=@url.full_url%>"/>
+  </p>
+
+
+  <input type="submit" value="Shorten it!"/>
+</form>

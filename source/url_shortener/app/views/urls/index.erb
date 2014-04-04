@@ -1,0 +1,33 @@
+<h1>All Urls</h1>
+
+<!-- Link to the url#create action -->
+<a href="/urls/new">Submit a new URL</a>
+
+<% @urls.each do |u| %>
+  <div class="margin-top-20 margin-bottom-20">
+
+    <div>
+      <span class="background-gray white rounded"><%=u.access_count%></span>
+      <a target="_blank" href="/<%=u.short_code%>">http://localhost:9393/<%=u.short_code%></a>
+
+      <!-- since deleting a Url requires we send the request as DELETE request
+           and HTML doesn't support DELETE (only GET and POST), we send a post
+           request, but also send a specially named parameter '_method' whose
+           value is the HTTP method we'd *like* to use. The _method parameter
+           is a feature of Rack & Sinatra. It's not a standard in the way
+           HTML & HTTP are standards.
+
+           We're using a form, because Sinatra's method_override feature
+           requires we send a POST ;)
+       -->
+      <form class="inline" action="/urls/<%=u.id%>" method="post">
+        <input type="hidden" name="_method" value="delete"/>
+        <input class="small-text" type="submit" value="delete"/>
+      </form>
+    </div>
+
+    <div class="indent dim small-text">
+      <%=u.full_url%>
+    </div>
+  </div>
+<% end %>

@@ -1,3 +1,8 @@
+body {
+  padding: 20px;
+
+}
+
 .container {
   margin: 20px auto;
   width: 600px;
@@ -6,4 +11,47 @@
 }
 th {
   text-align: left;
+}
+
+.indent {
+  padding-left: 30px;
+}
+
+.dim {
+  color: gray;
+}
+
+.small-text {
+  font-size: .8em;
+}
+
+.warnings {
+  border: solid 1px red;
+  padding: 20px;
+  width: 400px;
+}
+
+.inline {
+  display: inline;
+}
+
+.margin-top-20 {
+  margin-top: 20px;
+}
+
+.margin-bottom-20 {
+  margin-bottom: 20px;
+}
+
+.background-gray {
+  background-color: gray;
+}
+
+.white {
+  color: white;
+}
+
+.rounded {
+  border-radius: 5px;
+  padding: 5px;
 }
