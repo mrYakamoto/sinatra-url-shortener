@@ -17,6 +17,8 @@ require 'logger'
 
 require 'sinatra'
 require "sinatra/reloader" if development?
+require './lib/terse_params_logger.rb'
+use TerseParamsLogger
 
 require 'erb'
 
