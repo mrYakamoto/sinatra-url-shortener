@@ -184,7 +184,7 @@ You should also write tests to check each branch of your conditionals (if/else)
 that correspond to user authentication.
 
 
-### Release 5: Add Validations
+### Release 5: Add Validations (Optional)
 
 Test-drive adding a validation to your `Url` model so that only `Urls` with 
 valid URLs are saved to the database. Read up on [ActiveRecord validations][].
@@ -214,7 +214,7 @@ The rule of thumb is that where we can, we want to always express constraints
 in Ruby Land and also express them in SQL Land where feasible.
 
 
-### Release 5: Add Error Handling
+### Release 6: Add Error Handling (Optional)
 
 When you try to save (create or update) an ActiveRecord object that has invalid
 data, ActiveRecord will fail. Some methods like `create!` and `save!` throw an
@@ -272,7 +272,7 @@ These facts can be recorded in both SQL Land and in Ruby Land, like this:
   </tr>
 </table>
 
-### Release 7: Deployment
+### Release 7: Deployment (Optional)
 
 You're feature complete with 100% test coverage. It's time to push this thing into
 production! Get the app up on Heroku, and call it a night.
