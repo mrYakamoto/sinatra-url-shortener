@@ -48,6 +48,7 @@ require 'spec_helper'
 describe "index_controller" do
   # specs go here!
 end
+```
 
 We'll also need a route that redirects us to the full (unshortened) URL. As 
 always, write a test first.  If you've never used bitly, use it now to get a 
