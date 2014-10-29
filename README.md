@@ -36,9 +36,9 @@ about how to test a controller.
 Write a failing test first. After you've made it pass by implementing the route,
 write a failing test for the `POST /urls` route. Keep the 
 
-1. Arrange
-2. Act
-3. Assert
+1. Given
+2. When
+3. Then
 
 steps in mind, since they'll help you set up the test for your POST route. Here's
 the general format for an empty controller test:
